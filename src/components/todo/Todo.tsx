@@ -1,6 +1,7 @@
 import { ChangeEvent, useState } from 'react'
 import  {ITask} from "./interfaces";
 import TodoTask from '../todoTask/TodoTask.tsx'
+import './todo.css'
 
 const Todo = () =>{
     const [task, setTask] = useState<string>("");
@@ -32,29 +33,29 @@ const Todo = () =>{
     }
 
     return (
-        <div className="App">
-            <div className='header'>
+        <>
+            <div className='todoForm'>
                 <div className='inputContainer'>
                     <input type="text"
-                           placeholder='Task...'
+                           placeholder='Enter task'
                            name='task'
                            value={task}
                            onChange={handleChange} />
 
                     <input type="number"
-                           placeholder='DeadLine (in days)'
+                           placeholder='Enter deadline (in days)'
                            name='deadline'
                            value={deadLine}
                            onChange={handleChange} />
                 </div>
-                <button onClick={addTask}>Add Task</button>
+                <button className='buttonAddTask' onClick={addTask}>Add Task</button>
             </div>
             <div className='todoList'>
                 {todo.map((task:ITask, key:number)=>{
                     return <TodoTask key={key} task={task} completeTask={completeTask} />
                 })}
             </div>
-        </div>
+        </>
     )
 }
 

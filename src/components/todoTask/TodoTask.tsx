@@ -1,4 +1,5 @@
 import {ITask} from "../../interfaces";
+import './todoTask.css';
 
 interface Props{
     task:ITask;
@@ -12,7 +13,7 @@ const TodoTask = ({task, completeTask}:Props) => {
                 <span>{task.taskName}</span>
                 <span>{task.deadline}</span>
             </div>
-            <button onClick={()=>{
+            <button className='buttonRemoveTask' onClick={()=>{
                 completeTask(task.taskName);
             }}>X</button>
         </div>

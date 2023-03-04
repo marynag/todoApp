@@ -1,0 +1,28 @@
+.task{
+    margin: 10px;
+    padding:15px;
+    width:400px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #8ce083;
+    border-radius: 10px;
+}
+
+.content{
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttonRemoveTask{
+    background-color: #011515;
+    border: none;
+    color:white;
+    border-radius: 4px;
+}
+
+.buttonRemoveTask:hover{
+    background-color: #042f10;
+    color: rgb(253, 220, 112);
+    cursor: pointer;
+}
