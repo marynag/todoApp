@@ -15,7 +15,7 @@ const TodoTask = ({task, completeTask}:Props) => {
             </div>
             <button className='buttonRemoveTask' onClick={()=>{
                 completeTask(task.taskName);
-            }}>X</button>
+            }}>&#9587;</button>
         </div>
     );
 }

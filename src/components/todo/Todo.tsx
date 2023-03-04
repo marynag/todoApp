@@ -17,6 +17,10 @@ const Todo = () =>{
     }
 
     const addTask = ():void =>{
+        if(!task || !deadLine){
+            alert('Enter todo')
+            return
+        }
         const newTask = {
             taskName:task,
             deadline:deadLine
